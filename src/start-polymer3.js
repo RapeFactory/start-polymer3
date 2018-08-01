@@ -42,7 +42,7 @@ class StartPolymer3 extends PolymerElement {
     // Resolve warning about scroll performance 
     // See https://developers.google.com/web/updates/2016/06/passive-event-listeners
     setPassiveTouchGestures(true);
-    this.message = 'Hello World! I\'m a Polymer element :)';
+    this.message = `Hello Hacker! Do you want to visit our event? Let try to register on it :)`;
   }
 
   ready(){
@@ -77,7 +77,7 @@ class StartPolymer3 extends PolymerElement {
         }
       </style>
 
-      <h1>Start Polymer 3.0</h1>
+      <h1>Agility Hacker Test</h1>
       <p>[[message]]</p>
       <paper-checkbox id="omgpie"
         toggles
