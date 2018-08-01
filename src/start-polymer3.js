@@ -14,6 +14,8 @@
 import { PolymerElement, html } from '@polymer/polymer/polymer-element.js';
 import '@polymer/polymer/lib/elements/dom-if.js';
 import '@polymer/paper-checkbox/paper-checkbox.js';
+import '@polymer/paper-input/paper-input.js';
+import '@polymer/paper-button/paper-button';
 import { setPassiveTouchGestures } from '@polymer/polymer/lib/utils/settings';
 
 class StartPolymer3 extends PolymerElement {
@@ -51,7 +53,7 @@ class StartPolymer3 extends PolymerElement {
     // Output the custom element's HTML tag to the browser console.
     // Open your browser's developer tools to view the output.
     console.log(this.tagName);
-    this.$.omgpie.focus();
+    this.$.name.focus();
   }
   
   togglePie(){
@@ -75,10 +77,44 @@ class StartPolymer3 extends PolymerElement {
           --paper-checkbox-checked-ink-color: #FFFFFF;
           --paper-checkbox-unchecked-ink-color: #FFFFFF;
         }
+
+        * {
+          text-align: center;
+        }
+
+        paper-input {
+          margin: auto;
+          width: 50%;
+        }
+
+        paper-button {
+          display:block;
+          position: relative;
+          margin:0 auto;
+          width: 200px;
+        }
       </style>
 
       <h1>Agility Hacker Test</h1>
       <p>[[message]]</p>
+
+      <paper-input id="name" label="name">
+        <iron-icon icon="user"></iron-icon>
+      </paper-input>
+      
+      <paper-input id="email" label="email">
+        <iron-icon icon="mail"</iron-icon>
+      </paper-input>
+
+      <paper-input id="password" type="password" label="password">
+        <iron-icon icon="password"></iron-icon>
+      </paper-input>
+
+      <paper-button raised id="submit" type="submit" label="submit">
+        Submit
+      </paper-button>
+
+      <!-- 
       <paper-checkbox id="omgpie"
         toggles
         noink
@@ -86,6 +122,7 @@ class StartPolymer3 extends PolymerElement {
       <template is="dom-if" if=[[pie]]>
         <lazy-element><p>lazy loading...</p></lazy-element>
       </template>
+      -->
     `;
   }
 }

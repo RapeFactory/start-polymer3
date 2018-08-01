@@ -6,7 +6,9 @@
   "author": "Alexandr Makeev",
   "license": "MIT",
   "dependencies": {
+    "@polymer/paper-button": "^3.0.0-pre.21",
     "@polymer/paper-checkbox": "^3.0.0-pre.12",
+    "@polymer/paper-input": "^3.0.0-pre.21",
     "@polymer/polymer": "^3.0.0-pre.12",
     "@webcomponents/webcomponentsjs": "^1.2.0"
   }
