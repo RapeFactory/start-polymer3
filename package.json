@@ -1,0 +1,13 @@
+{
+  "name": "start-polymer3",
+  "version": "0.0.1",
+  "main": "src/start-polymer3.js",
+  "repository": "https://github.com/RapeFactory/start-polymer3.git",
+  "author": "Alexandr Makeev",
+  "license": "MIT",
+  "dependencies": {
+    "@polymer/paper-checkbox": "^3.0.0-pre.12",
+    "@polymer/polymer": "^3.0.0-pre.12",
+    "@webcomponents/webcomponentsjs": "^1.2.0"
+  }
+}
