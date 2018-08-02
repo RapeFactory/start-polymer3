@@ -31,6 +31,14 @@ class StartPolymer3 extends PolymerElement {
         type: String,
         value: ''
       },
+      address: {
+        type: String,
+        value: ''
+      },
+      date: {
+        type: String,
+        value: ''
+      },
       pie: {
         type: Boolean,
         value: false,
@@ -39,6 +47,21 @@ class StartPolymer3 extends PolymerElement {
       loadComplete: {
         type: Boolean,
         value: false
+      },
+      name: {
+        type: String,
+        value: '',
+        notify: true
+      },
+      email: {
+        type: String,
+        value: '',
+        notify: true
+      },
+      password: {
+        type: String,
+        value: '',
+        notify: true
       }
     };
   }
@@ -51,6 +74,8 @@ class StartPolymer3 extends PolymerElement {
     // See https://developers.google.com/web/updates/2016/06/passive-event-listeners
     setPassiveTouchGestures(true);
     this.message = `Hello Hacker! Do you want to visit our event? Let try to register on it :)`;
+    this.address = `New York, Fifth Avenue, 11`;
+    this.date = `11.11.2018 3:00 PM`
   }
 
   ready(){
