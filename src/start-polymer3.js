@@ -158,33 +158,29 @@ class StartPolymer3 extends PolymerElement {
       </style>
 
       <h1>Agility Hacker Test</h1>
-      <p>[[message]]</p>
+      <h3>[[message]]</h3>
+      <h4>Address: [[address]]</h4>
+      <h4>Date: [[date]]</h4>
 
-      <paper-input id="name" label="name">
+      <paper-input id="name" label="name" onchange="{{onEdit}}">
         <iron-icon icon="user"></iron-icon>
       </paper-input>
       
-      <paper-input id="email" label="email">
+      <paper-input id="email" label="email" onchange="{{onEdit}}">
         <iron-icon icon="mail"</iron-icon>
       </paper-input>
 
-      <paper-input id="password" type="password" label="password">
+      <paper-input id="password" type="password" label="password" onchange="{{onEdit}}">
         <iron-icon icon="password"></iron-icon>
       </paper-input>
 
-      <paper-button raised id="submit" type="submit" label="submit">
+      <paper-button raised id="submit" type="submit" label="submit" on-click="onSubmit">
         Submit
       </paper-button>
 
-      <!-- 
-      <paper-checkbox id="omgpie"
-        toggles
-        noink
-        checked={{pie}}>I like pie.</paper-checkbox>
       <template is="dom-if" if=[[pie]]>
-        <lazy-element><p>lazy loading...</p></lazy-element>
+        <lazy-element name="{{name}}" email="{{email}}"><p>lazy loading...</p></lazy-element>
       </template>
-      -->
     `;
   }
 }
