@@ -76,6 +76,13 @@ class StartPolymer3 extends PolymerElement {
     this.message = `Hello Hacker! Do you want to visit our event? Let try to register on it :)`;
     this.address = `New York, Fifth Avenue, 11`;
     this.date = `11.11.2018 3:00 PM`
+    this.onEdit = function (e) {
+      const { id, value } = e.target;
+      console.log(id);
+      console.log(value);
+      this.set([id], value);
+    };
+    this.onEdit = this.onEdit.bind(this);
   }
 
   ready(){
@@ -96,6 +103,30 @@ class StartPolymer3 extends PolymerElement {
         console.log("LazyElement failed to load", reason);
       });
       this.loadComplete = true;
+    }
+  }
+
+  onSubmit(e) {
+    // Сработает при заполненности всех данных
+    if (this.name && this.password && this.email) {
+      const headers = new Headers();
+      headers.append('Content-Type', 'application/json');
+
+      const body = {
+        name: this.name,
+        email: this.email,
+        password: this.password
+      };
+
+      fetch('https://httpbin.org/anything', {
+        method: 'POST',
+        headers,
+        body: JSON.stringify(body)
+      })
+        .then(res => res.json())
+        // Убедимся, что сервер дал верный ответ
+        .then(obj => this.pie = obj.data === JSON.stringify(body))
+        .catch(console.error);
     }
   }
 
