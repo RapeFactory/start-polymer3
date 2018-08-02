@@ -13,6 +13,12 @@
 // so no need to change the symbol. 
 import { PolymerElement, html } from '@polymer/polymer/polymer-element.js';
 
+/**
+ * Элемент, подтверждающий регистрацию на мероприятие
+ *
+ * @class LazyElement
+ * @extends {PolymerElement}
+ */
 class LazyElement extends PolymerElement {
   static get template () {
     // Template getter must return an instance of HTMLTemplateElement.

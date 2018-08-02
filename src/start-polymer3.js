@@ -18,6 +18,12 @@ import '@polymer/paper-input/paper-input.js';
 import '@polymer/paper-button/paper-button';
 import { setPassiveTouchGestures } from '@polymer/polymer/lib/utils/settings';
 
+/**
+ * Главный элемент формы
+ *
+ * @class StartPolymer3
+ * @extends {PolymerElement}
+ */
 class StartPolymer3 extends PolymerElement {
   static get properties () {
     return {
