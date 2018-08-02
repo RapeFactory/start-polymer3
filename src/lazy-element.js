@@ -20,11 +20,20 @@ import { PolymerElement, html } from '@polymer/polymer/polymer-element.js';
  * @extends {PolymerElement}
  */
 class LazyElement extends PolymerElement {
+  static get properties() {
+    return {
+      name: String,
+      email: String
+    };
+  }
+
   static get template () {
     // Template getter must return an instance of HTMLTemplateElement.
     // The html helper function makes this easy.
     return html`
-      <p>You like pie.</p>
+      <p>You have successfully registered for the event</p>
+      <p>Your name: {{name}}</p>
+      <p>Your email: {{email}}</p>
     `;
   }
 }
